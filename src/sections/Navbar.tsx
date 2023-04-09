@@ -1,14 +1,9 @@
-// Links
 import { NavLink } from "react-router-dom";
-
-// state
 import { useState } from "react";
-
-// Authentication
-// import { useAuth0 } from "@auth0/auth0-react";
-// import LoginBtn from "../auth/LoginBtn";
-// import LogoutBtn from "../auth/LogoutBtn";
-// import User from "../auth/User";
+import { useAuth0 } from "@auth0/auth0-react";
+import LoginBtn from "../components/auth/";
+import LogoutBtn from "../auth/LogoutBtn";
+import User from "../auth/User";
 
 const Navbar = (): JSX.Element => {
   const { isAuthenticated, error, isLoading } = useAuth0();
