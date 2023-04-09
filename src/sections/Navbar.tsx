@@ -1,9 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import LoginBtn from "../components/auth/";
-import LogoutBtn from "../auth/LogoutBtn";
-import User from "../auth/User";
+import { LoginBtn, LogoutBtn, User } from "../components/auth/index";
 
 const Navbar = (): JSX.Element => {
   const { isAuthenticated, error, isLoading } = useAuth0();
@@ -15,31 +13,31 @@ const Navbar = (): JSX.Element => {
         <div className="mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
           <nav className="relative flex h-[5.5rem] items-stretch justify-between font-medium">
             {/* logo */}
-            <div className="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1">
-              <img src="lorde_logo.png" alt="" className="w-12 h-12" />
-            </div>
+            <p className="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1">
+              Ayra Starr
+            </p>
 
             {/* responsive menu */}
             <button
-              className="relative self-center order-10 visible block w-10 h-10 opacity-100 lg:hidden"
+              className="relative self-center order-10 visible block w-10 h-10 opacity-100 lg:hidden bg-gray-200"
               onClick={(): void => setOpen(!open)}
             >
               <div className="absolute w-6 transition-all duration-200 ease-in transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                 {open ? (
-                  <span className="text-2xl font-extrabold"> X</span>
+                  <span className="text-2xl"> X</span>
                 ) : (
                   <>
                     <span
                       aria-hidden="true"
-                      className="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full transition-all duration-300 bg-melo-night-blue"
+                      className="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full transition-all duration-300 bg-gray-800"
                     ></span>
                     <span
                       aria-hidden="true"
-                      className="absolute block h-0.5 w-6 transform rounded-full transition duration-300 bg-melo-night-blue"
+                      className="absolute block h-0.5 w-6 transform rounded-full transition duration-300 bg-gray-800"
                     ></span>
                     <span
                       aria-hidden="true"
-                      className="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full transition-all duration-300 bg-melo-night-blue"
+                      className="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full transition-all duration-300 bg-gray-800"
                     ></span>
                   </>
                 )}
@@ -122,14 +120,14 @@ const Navbar = (): JSX.Element => {
                     </NavLink>
                   </>
                 )}
-                {/* <LoginBtn />
-                <LogoutBtn /> */}
+                <LoginBtn />
+                <LogoutBtn />
              </ul>
             )}
 
             {isAuthenticated && (
               <div className="flex items-center justify-end px-8 ml-auto font-bold tracking-wide lg:ml-0 lg:flex-1 text-pure-white">
-                {/* <User /> */}
+                <User />
               </div>
             )}
           </nav>
