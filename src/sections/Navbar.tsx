@@ -13,7 +13,7 @@ const Navbar = (): JSX.Element => {
         <div className="mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
           <nav className="relative flex h-[5.5rem] items-stretch justify-between font-medium">
             {/* logo */}
-            <p className="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1">
+            <p className="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1 italics">
               Ayra Starr
             </p>
 
