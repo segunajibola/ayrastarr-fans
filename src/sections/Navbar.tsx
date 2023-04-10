@@ -46,7 +46,7 @@ const Navbar = (): JSX.Element => {
             {/* max-lg:left-72 max-lg:border-2 opacity-0 max-lg:z-20 max-lg:hover:opacity-100 max-lg:min-w  */}
             {!error && !isLoading && (
               <ul
-                className={`max-lg:bg-pure-white max-lg:w-64 max-lg:top-[5.5rem] max-lg:pt-4 max-lg:-right-6 absolute top-0 left-0 z-[-1] ml-auto h-screen w-full justify-center overflow-y-auto overscroll-contain px-8 pb-12 pt-28 font-medium transition-all ease-in-out duration-500 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100 max-lg:hidden ${
+                className={`max-lg:bg-pure-white max-lg:w-64 max-lg:top-[5.5rem] max-lg:pt-4 max-lg:-right-6 absolute top-0 left-0 z-[-1] ml-auto h-screen w-full justify-center overflow-y-auto overscroll-contain px-8 pb-12 pt-28 font-medium transition-all ease-in-out duration-500 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100 ${
                   open ? "max-lg:block shadow-lg max-lg:h-fit" : "max-lg:hidden"
                 }`}
               >
@@ -122,7 +122,7 @@ const Navbar = (): JSX.Element => {
                 )}
                 <LoginBtn />
                 <LogoutBtn />
-             </ul>
+              </ul>
             )}
 
             {isAuthenticated && (
